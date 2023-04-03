@@ -1,5 +1,7 @@
 # Graph of Thrones :crown:
 
+Produzido por: Rebeca Queiroz e Wemilly Souza.
+
 ## Sumário
 
 1. [Introdução](#introdução)
