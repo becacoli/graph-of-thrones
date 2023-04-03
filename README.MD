@@ -69,7 +69,7 @@ Essa abordagem permite representar relações complexas de forma clara e eficien
 
     ```cypher
     MATCH (character:Character)
-    WHERE character.gender = 'feminine'
+    WHERE character.gender = 'masculine'
     RETURN character
     ```
 
