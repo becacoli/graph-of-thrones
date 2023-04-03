@@ -7,7 +7,7 @@ Produzido por: Rebeca Queiroz e Wemilly Souza.
 1. [Introdução](#introdução)
 2. [Modelagem](#modelagem)
 3. [Instalação](#instalação)
-4. [Uso](#uso)
+4. [Consultas](#consultas)
 
 ### Introdução
     Nesse projeto, usaremos um banco de dados baseado em grafos usando [Neo4j](https://neo4j.com/) e Docker para armazenar dados dos personagens da série chamada Game of Thrones.
@@ -23,4 +23,46 @@ Produzido por: Rebeca Queiroz e Wemilly Souza.
 
     Essa abordagem permite representar relações complexas de forma clara e eficiente. Além disso, o uso de grafos permite consultas e análises rápidas e flexíveis, que podem ser utilizadas para obter insights valiosos em dados complexos.
 
+### Instalação
 
+### Consultas
+
+    Para realizar as consultas, após adicionar os dados, usaremos alguns comandos Cypher.
+
+
+1. **Para selecionar todos os nós e relacionamentos**
+
+   ```cypher
+   MATCH (n) RETURN n;
+   ```
+2. **Para selecionar os nós conectados por meio da relação "MOTHER" com o nó do nome da mãe**
+
+    ```cypher 
+    MATCH (c:Character {name: 'Cersei Lannister'})-[:MOTHER]->(child:Character) RETURN child.name
+    ```
+
+     ```cypher 
+    MATCH (c:Character {name: 'Catelyn Stark'})-[:MOTHER]->(child:Character)
+    RETURN child.name
+    ```
+
+3. **Para selecionar o nome de todos os personagens que pertencem à casa Lannister**
+
+    ```cypher 
+        MATCH (c:Character {house: 'Lannister'})
+        RETURN c.name
+    ```
+4. **Para selecionar o nome de todos os personagens que não contêm a letra a no nome**
+    ```cypher 
+    MATCH (character:Character)
+    WHERE NOT character.name CONTAINS 'a'
+    RETURN character
+    ```
+
+5. **Para selecionar o nome de todos os personagens que não contêm a letra a no nome**
+    ```cypher 
+    MATCH (character:Character)
+    WHERE character.name CONTAINS 'a'
+    RETURN character
+    ```
+    
