@@ -59,13 +59,13 @@ Essa abordagem permite representar relações complexas de forma clara e eficien
     RETURN character
     ```
 
-5. **Para selecionar o nome de todos os personagens que não contêm a letra a no nome**
+5. **Para selecionar o nome de todos os personagens que contêm a letra a no nome**
     ```cypher 
     MATCH (character:Character)
     WHERE character.name CONTAINS 'a'
     RETURN character
     ```
-5. **Para selecionar o nome de todos os personagens do gênero feminino**
+5. **Para selecionar o nome de todos os personagens do gênero masculino**
 
     ```cypher
     MATCH (character:Character)
