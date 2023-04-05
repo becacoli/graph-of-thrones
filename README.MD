@@ -12,7 +12,7 @@ Produzido por: Rebeca Queiroz e Wemilly Souza.
 ### Introdução
 Nesse projeto, usaremos um banco de dados baseado em grafos usando [Neo4j](https://neo4j.com/) e Docker para armazenar dados dos personagens da série chamada Game of Thrones.
 
-A linguagem utilizada para interagir com os dados se chama (https://neo4j.com/developer/cypher/). Ela é usada pelo Neo4j como linguagem de query. Sendo assim, é com ela que faremos algumas consultas nesse tutorial.
+A linguagem utilizada para interagir com os dados se chama [Cypher](https://neo4j.com/developer/cypher/). Ela é usada pelo Neo4j como linguagem de query. Sendo assim, é com ela que faremos algumas consultas nesse tutorial.
 
 Os dados foram inseridos de forma manual para explicar a relação entre eles. 
 
